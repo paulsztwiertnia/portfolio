@@ -3,7 +3,7 @@ import * as React from 'react';
 export default function Hamburger() {
   return (
     <button 
-    className="menu" 
+    className="menu pointer-events-auto" 
     onClick={(e) => {
         const button = e.currentTarget;
         button.classList.toggle('opened');
