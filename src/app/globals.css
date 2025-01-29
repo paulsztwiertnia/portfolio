@@ -83,6 +83,10 @@ body {
   margin-top: 5.5rem;
 }
 
+.mt-divider {
+  margin-top: 10rem;
+}
+
 .menu {
   background-color: transparent;
   border: none;

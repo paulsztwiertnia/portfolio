@@ -22,7 +22,7 @@ export default function IconMotion({ src, alt, width, height, toolTip, className
             whileDrag={{ scale: 0.9 }}
             animate={{
                 x: 0,
-                y: yCord,
+                y: yCord
                 
             }}
             transition={{
