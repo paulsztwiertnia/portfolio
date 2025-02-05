@@ -21,15 +21,15 @@ export default function IconMotion({ src, alt, width, height, toolTip, className
             whileTap={{ scale: 0.95 }}
             whileDrag={{ scale: 0.9 }}
             animate={{
+                scale: [1, 1.05],
+                transition: {
+                    duration: 2,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                },
                 x: 0,
                 y: yCord
-                
-            }}
-            transition={{
-                duration: 2,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatType: "reverse",
             }}
         >
             <Tooltip title={toolTip}>
