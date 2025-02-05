@@ -14,6 +14,10 @@ body {
   background-color: #F5F5F4;
 }
 
+.font-open-sans {
+  font-family: var(--font-open-sans), sans-serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
