@@ -14,7 +14,7 @@ import Project from '@/components/ui/project';
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* Above the fold */}
       <div className="flex flex-row justify-center items-center h-[calc(100vh-100px)]">  
           <motion.div
@@ -99,7 +99,7 @@ export default function Home() {
       </div>
 
         {/* Projects Section */}
-        <div className="flex flex-row justify-center items-center">
+        {/* <div className="flex flex-row justify-center items-center">
           <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ export default function Home() {
               <Project title={projects[0].title} description={projects[0].description} image={projects[0].image} link={projects[0].link} techStack={projects[0].techStack} />
             </div>
           </motion.div>
-        </div>
+        </div> */}
 
       <div className="pt-2">
         <ScrollProgress />  

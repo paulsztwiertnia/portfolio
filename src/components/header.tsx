@@ -16,7 +16,7 @@ export default function Header() {
     <div className="flex justify-between items-center sticky top-0 z-50">
       <div className="flex items-center px-2">
         <Link href="/">
-          <Image src="/PS-logo-transparent.webp" alt="Logo" className="w-16 h-16 mt-2 me-3" width={100} height={100} />
+          <Image src="/icons/PS-logo-transparent.png" alt="Logo" className="w-16 h-16 mt-2 me-3" width={100} height={100} />
         </Link>
       </div>
       
