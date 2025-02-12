@@ -10,6 +10,7 @@ import SocialLinks from '@/components/ui/socialLinks';
 import ScrollProgress from '@/components/ui/scrollProgress';
 import IconMotion from '@/components/ui/iconMotion';
 import Project from '@/components/ui/project';
+import Card from '@/components/ui/card';
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
       </div>
 
       {/* About Me Section */}
-      <div className="flex flex-row justify-center items-center min-h-screen">
+      <div className="flex flex-row justify-center items-center min-h-screen mt-8">
         <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -99,20 +100,51 @@ export default function Home() {
       </div>
 
         {/* Projects Section */}
-        {/* <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row justify-center items-center">
           <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
           >
-            <div className="text-center">
+            <div className="text-center relative">
               <h3 className="text-xl font-light">Projects</h3>
               <p className="text-3xl md:text-4xl font-light mb-2">Discover My Work.</p>
-              <Project title={projects[0].title} description={projects[0].description} image={projects[0].image} link={projects[0].link} techStack={projects[0].techStack} />
+              
+              {/* First project doesn't need the stacking effect */}
+              <Project 
+                title={projects[0].title} 
+                description={projects[0].description} 
+                image={projects[0].image} 
+                link={projects[0].link} 
+                techStack={projects[0].techStack} 
+              />
+              
+              {/* Remaining projects with stacking effect */}
+              {projects.slice(1).map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ y: -150, opacity: 0 }}     // Starting position and opacity
+                whileInView={{ y: 0, opacity: 1 }}   // Ending position and opacity
+                viewport={{ once: true, margin: "-50px" }}  // When animation triggers
+                transition={{ 
+                  duration: 0.5,    // How long the animation takes
+                  delay: index * 0.2  // Stagger delay between cards
+                }}
+              >
+                <Project {...project} />
+              </motion.div>
+            ))}
             </div>
           </motion.div>
-        </div> */}
+        </div>
+        <div className="min-h-[100vh]">
+          <div className="flex flex-col">
+            <Card title={projects[0].title} description={projects[0].description} src={projects[0].image} url={projects[0].link || ''} color={projects[0].color || '#000000'} i={0} />
+            <Card title={projects[1].title} description={projects[1].description} src={projects[1].image} url={projects[1].link || ''} color={projects[1].color || '#000000'} i={1} />
+            <Card title={projects[2].title} description={projects[2].description} src={projects[2].image} url={projects[2].link || ''} color={projects[2].color || '#000000'} i={2} />
+          </div>
+        </div>
 
       <div className="pt-2">
         <ScrollProgress />  
