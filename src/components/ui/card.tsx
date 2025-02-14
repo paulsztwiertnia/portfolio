@@ -1,17 +1,26 @@
 'use client'
 import Image from 'next/image';
 
-const Card = ({title, description, src, url, color, i}: {title: string, description: string, src: string, url: string, color: string, i: number}) => {
+interface CardProps {
+  title: string;
+  description: string;
+  src: string;
+  url: string;
+  color: string;
+  i: number;
+}
+
+const Card = ({title, description, src, url, color, i}: CardProps) => {
   return (
     <div className="h-screen flex items-center justify-center sticky top-0">
       <div 
         className="flex flex-col relative w-[90%] max-w-[1000px] p-[50px] rounded-[25px] origin-top"
         style={{backgroundColor: color, top:`calc(-5vh + ${i * 25}px)`}}
       >
-        <h2 className="text-center m-0 text-[28px]">{title}</h2>
+        <h2 className="text-center m-0 text-[33px]">{title}</h2>
         <div className="flex gap-[50px] mt-[30px]">
           <div className="w-[40%] flex flex-col justify-between">
-            <p className="text-base first-letter:text-[28px] first-letter:font-['Title']">
+            <p className="text-base">
               {description}
             </p>
             <span className="flex items-center gap-[5px]">
@@ -24,14 +33,14 @@ const Card = ({title, description, src, url, color, i}: {title: string, descript
             </span>
           </div>
 
-          <div className="relative w-[60%] h-[500px]">
+          <div className="relative w-[60%] h-[300px]">
             <div className="relative w-full h-full">
               <Image
                 width={600}
                 height={600}
                 src={`${src}`}
                 alt="image"
-                className="object-cover" 
+                className="object-cover rounded-md border-2" 
               />
             </div>
           </div>
