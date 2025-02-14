@@ -67,6 +67,7 @@ export default function Home() {
                 <IconMotion src="/icons/c-programming.svg" alt="C" width={100} height={100} toolTip="C" className="mb-8" yCord={[0, -22, 0]} />
                 <IconMotion src="/icons/python-logo.png" alt="Python" width={100} height={100} toolTip="Python" className="mb-8" yCord={[0, -19, 0]} />
                 <IconMotion src="/icons/php.png" alt="PHP" width={100} height={100} toolTip="PHP" className="mb-8" yCord={[0, -21, 0]} />
+                <IconMotion src="/icons/buddy-works.png" alt="Buddy Works" width={100} height={100} toolTip="Buddy Works" className="mb-8" yCord={[0, -18, 0]} />
                 
               </div>
               <div className="flex flex-col items-center">
@@ -100,49 +101,15 @@ export default function Home() {
       </div>
 
         {/* Projects Section */}
-        <div className="flex flex-row justify-center items-center">
-          <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-          >
-            <div className="text-center relative">
-              <h3 className="text-xl font-light">Projects</h3>
-              <p className="text-3xl md:text-4xl font-light mb-2">Discover My Work.</p>
-              
-              {/* First project doesn't need the stacking effect */}
-              <Project 
-                title={projects[0].title} 
-                description={projects[0].description} 
-                image={projects[0].image} 
-                link={projects[0].link} 
-                techStack={projects[0].techStack} 
-              />
-              
-              {/* Remaining projects with stacking effect */}
-              {projects.slice(1).map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ y: -150, opacity: 0 }}     // Starting position and opacity
-                whileInView={{ y: 0, opacity: 1 }}   // Ending position and opacity
-                viewport={{ once: true, margin: "-50px" }}  // When animation triggers
-                transition={{ 
-                  duration: 0.5,    // How long the animation takes
-                  delay: index * 0.2  // Stagger delay between cards
-                }}
-              >
-                <Project {...project} />
-              </motion.div>
-            ))}
-            </div>
-          </motion.div>
-        </div>
         <div className="min-h-[100vh]">
           <div className="flex flex-col">
             <Card title={projects[0].title} description={projects[0].description} src={projects[0].image} url={projects[0].link || ''} color={projects[0].color || '#000000'} i={0} />
             <Card title={projects[1].title} description={projects[1].description} src={projects[1].image} url={projects[1].link || ''} color={projects[1].color || '#000000'} i={1} />
             <Card title={projects[2].title} description={projects[2].description} src={projects[2].image} url={projects[2].link || ''} color={projects[2].color || '#000000'} i={2} />
+            <Card title={projects[3].title} description={projects[3].description} src={projects[3].image} url={projects[3].link || ''} color={projects[3].color || '#000000'} i={3} />
+            <Card title={projects[4].title} description={projects[4].description} src={projects[4].image} url={projects[4].link || ''} color={projects[4].color || '#000000'} i={4} />
+            <Card title={projects[5].title} description={projects[5].description} src={projects[5].image} url={projects[5].link || ''} color={projects[5].color || '#000000'} i={5} />
+            <Card title={projects[6].title} description={projects[6].description} src={projects[6].image} url={projects[6].link || ''} color={projects[6].color || '#000000'} i={6} />
           </div>
         </div>
 
