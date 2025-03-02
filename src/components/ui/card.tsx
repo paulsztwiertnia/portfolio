@@ -14,16 +14,16 @@ const Card = ({title, description, src, url, color, i}: CardProps) => {
   return (
     <div className="h-screen flex items-center justify-center sticky top-0">
       <div 
-        className="flex flex-col relative w-[90%] max-w-[1000px] p-[50px] rounded-[25px] origin-top"
+        className="flex flex-col relative w-full md:w-[90%] max-w-[1000px] p-4 md:p-[50px] rounded-[25px] origin-top"
         style={{backgroundColor: color, top:`calc(-5vh + ${i * 25}px)`}}
       >
-        <h2 className="text-center m-0 text-[33px]">{title}</h2>
-        <div className="flex gap-[50px] mt-[30px]">
-          <div className="w-[40%] flex flex-col justify-between">
-            <p className="text-base">
+        <h2 className="text-center m-0 text-xl md:text-3xl">{title}</h2>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-[50px] mt-4 md:mt-[30px]">
+          <div className="w-full md:w-[40%] flex flex-col justify-between">
+            <p className="text-sm md:text-base">
               {description}
             </p>
-            <span className="flex items-center gap-[5px]">
+            <span className="flex items-center gap-[5px] mt-4 md:mt-0">
               <a href={url} target="_blank" className="text-xs underline cursor-pointer">
                 See more
               </a>
@@ -33,7 +33,7 @@ const Card = ({title, description, src, url, color, i}: CardProps) => {
             </span>
           </div>
 
-          <div className="relative w-[60%] h-[300px]">
+          <div className="relative w-full md:w-[60%] h-[200px] md:h-[300px]">
             <div className="relative w-full h-full">
               <Image
                 width={600}
