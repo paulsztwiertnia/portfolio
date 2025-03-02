@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Hamburger from '../components/ui/hamburger';
+import Hamburger from './hamburger';
 
 export default function Header() {
   const [value, setValue] = React.useState('home');
