@@ -9,7 +9,7 @@ const JobTitle = () => {
         animate={{ width: "100%" }}
         transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
       >
-        <h2 className="text-2xl md:text-2xl mt-1 mb-2">Software Engineer</h2>
+        <h2 className="text-xl md:text-2xl mt-1 mb-2">Software Engineer</h2>
       </motion.div>
     </div>
   )
