@@ -24,7 +24,7 @@ const Project = ({ title, description, image, link, techStack }: ProjectProps) =
                 </div> 
                 <div className="flex flex-col justify-center items-start w-1/2 px-4">
                     <h1 className="text-3xl font-bold mb-4">{title}</h1>
-                    <p className="text-sm text-left mb-2 font-open-sans">{description}</p>
+                    <p className="text-sm text-left mb-2">{description}</p>
                     <div className="flex flex-row items-center gap-2">
                         {techStack.map((tech, index) => (
                             <div key={index}>
