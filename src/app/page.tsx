@@ -4,15 +4,14 @@ import Header from '../components/ui/header';
 import JobTitle from '../components/ui/jobTitle';
 import Avatar from '@mui/material/Avatar';
 import { motion } from 'framer-motion';
-
 import { aboutMe, projects } from './content';
 import SocialLinks from '@/components/ui/socialLinks';
-import ScrollProgress from '@/components/ui/scrollProgress';
 import IconMotion from '@/components/ui/iconMotion';
 import Timeline from '@/components/ui/timeline';
 import Card from '@/components/ui/card';
 
 export default function Home() {
+
   return (
     <>
       <Header />
@@ -46,7 +45,7 @@ export default function Home() {
       </div>
 
       {/* About Me Section */}
-      <div className="flex flex-col justify-center items-center min-h-screen mt-8 px-4">
+      <div id="about" className="flex flex-col justify-center items-center min-h-screen mt-8 px-4 scroll-mt-[72px]">
         <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -96,11 +95,12 @@ export default function Home() {
       </div>
       {/* Timeline Section */}
       <motion.div
+        id="experience"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
-        className="md:mt-64 md:mb-32 mb-8"
+        className="md:mt-64 md:mb-32 mb-8 scroll-mt-[72px]"
       >
         <div className="text-center">
           <h3 className="text-lg md:text-xl font-light">Experience</h3>
@@ -110,7 +110,7 @@ export default function Home() {
       </motion.div>
 
       {/* Projects Section */}
-      <div className="px-4 relative">
+      <div id="projects" className="px-4 relative scroll-mt-[72px]">
         <div className="sticky top-12 pb-4 pt-12">
           <div className="text-center">
               <h3 className="text-lg md:text-xl font-light">Projects</h3>
@@ -122,10 +122,6 @@ export default function Home() {
             <Card key={i} title={project.title} description={project.description} src={project.image} url={project.link || ''} color={project.color || '#000000'} i={i} />
           ))}
         </div>
-      </div>
-
-      <div className="pt-2">
-        <ScrollProgress />  
       </div>
     </>
   );
