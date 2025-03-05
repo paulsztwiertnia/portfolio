@@ -19,12 +19,12 @@ const Card = ({title, description, src, url, color, i}: CardProps) => {
       >
         <h2 className="text-center m-0 text-xl md:text-3xl">{title}</h2>
         <div className="flex flex-col md:flex-row gap-4 md:gap-[50px] mt-4 md:mt-[30px]">
-          <div className="w-full md:w-[40%] flex flex-col justify-between">
-            <p className="text-sm md:text-base">
+          <div className="w-full md:w-[40%] flex flex-col ">
+            <p className="text-lg sm:text-xs md:text-xs lg:text-lg font-open-sans">
               {description}
             </p>
-            <span className="flex items-center gap-[5px] mt-4 md:mt-0">
-              <a href={url} target="_blank" className="text-xs underline cursor-pointer">
+            <span className="flex items-center gap-[5px] mt-5">
+              <a href={url} target="_blank" className="underline cursor-pointer underline-offset-2 font-open-sans">
                 See more
               </a>
               <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
