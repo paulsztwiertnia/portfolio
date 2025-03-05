@@ -45,11 +45,7 @@ export default function CustomizedTimeline() {
                 bgcolor: 'background.paper',
                 border: '2px solid',
                 borderColor: 'text.primary',
-                color: 'text.primary',
-                transition: 'all 0.3s',
-                '&:hover': { 
-                  transform: 'scale(1.1)',
-                }
+                color: 'text.primary'
               }}
             >
               <WorkIcon 
@@ -108,11 +104,7 @@ export default function CustomizedTimeline() {
                 bgcolor: 'background.paper',
                 border: '2px solid',
                 borderColor: 'text.primary',
-                color: 'text.primary',
-                transition: 'all 0.3s',
-                '&:hover': { 
-                  transform: 'scale(1.1)',
-                }
+                color: 'text.primary'
               }}
             >
               <WorkIcon 
@@ -171,11 +163,7 @@ export default function CustomizedTimeline() {
                 bgcolor: 'background.paper',
                 border: '2px solid',
                 borderColor: 'text.primary',
-                color: 'text.primary',
-                transition: 'all 0.3s',
-                '&:hover': { 
-                  transform: 'scale(1.1)',
-                }
+                color: 'text.primary'
               }}
             >
               <WorkIcon 
@@ -234,11 +222,7 @@ export default function CustomizedTimeline() {
                 bgcolor: 'background.paper',
                 border: '2px solid',
                 borderColor: 'text.primary',
-                color: 'text.primary',
-                transition: 'all 0.3s',
-                '&:hover': { 
-                  transform: 'scale(1.1)',
-                }
+                color: 'text.primary'
               }}
             >
               <WorkIcon 
@@ -297,11 +281,7 @@ export default function CustomizedTimeline() {
                 bgcolor: 'background.paper',
                 border: '2px solid',
                 borderColor: 'text.primary',
-                color: 'text.primary',
-                transition: 'all 0.3s',
-                '&:hover': { 
-                  transform: 'scale(1.1)',
-                }
+                color: 'text.primary'
               }}
             >
               <SchoolIcon sx={{ 
@@ -358,11 +338,7 @@ export default function CustomizedTimeline() {
                 bgcolor: 'background.paper',
                 border: '2px solid',
                 borderColor: 'text.primary',
-                color: 'text.primary',
-                transition: 'all 0.3s',
-                '&:hover': { 
-                  transform: 'scale(1.1)',
-                }
+                color: 'text.primary'
               }}
             >
               <WorkIcon 
