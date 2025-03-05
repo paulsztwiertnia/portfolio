@@ -110,8 +110,14 @@ export default function Home() {
       </motion.div>
 
       {/* Projects Section */}
-      <div className="min-h-screen">
-        <div className="flex flex-col">
+      <div className="px-4 relative">
+        <div className="sticky top-12 pb-4 pt-12">
+          <div className="text-center">
+              <h3 className="text-lg md:text-xl font-light">Projects</h3>
+              <p className="text-2xl md:text-3xl font-light mb-2">Explore my work.</p>
+          </div>
+        </div>
+        <div className="flex flex-col -mt-4">
           {projects.map((project, i) => (
             <Card key={i} title={project.title} description={project.description} src={project.image} url={project.link || ''} color={project.color || '#000000'} i={i} />
           ))}
