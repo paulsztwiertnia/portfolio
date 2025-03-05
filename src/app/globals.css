@@ -9,6 +9,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-michroma), sans-serif;
   background-color: #F5F5F4;
