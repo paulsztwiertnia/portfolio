@@ -9,12 +9,13 @@ import SocialLinks from '@/components/ui/socialLinks';
 import IconMotion from '@/components/ui/iconMotion';
 import Timeline from '@/components/ui/timeline';
 import Card from '@/components/ui/card';
+import ContactForm from '@/components/ui/contactForm';
 
 export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header /> 
       {/* Above the fold */}
       <div className="flex flex-col md:flex-row justify-center items-center h-[calc(100vh-100px)] px-4">  
           <motion.div
@@ -110,19 +111,22 @@ export default function Home() {
       </motion.div>
 
       {/* Projects Section */}
-      <div id="projects" className="px-4 relative scroll-mt-[72px]">
-        <div className="sticky top-12 pb-4 pt-12">
-          <div className="text-center">
-              <h3 className="text-lg md:text-xl font-light">Projects</h3>
-              <p className="text-2xl md:text-3xl font-light mb-2">Explore my work.</p>
-          </div>
+      <div className="sticky top-12 pb-4 pt-12">
+        <div className="text-center">
+            <h3 className="text-lg md:text-xl font-light">Projects</h3>
+            <p className="text-2xl md:text-3xl font-light mb-2">Explore my work.</p>
         </div>
-        <div className="flex flex-col -mt-4">
+      </div>
+      <div id="projects" className="px-4 relative scroll-mt-[72px]">
+        <div className="flex flex-col mt-4">
           {projects.map((project, i) => (
             <Card key={i} title={project.title} description={project.description} src={project.image} url={project.link || ''} color={project.color || '#000000'} i={i} />
           ))}
         </div>
       </div>
+
+      {/* Contact Section */}
+      <ContactForm />
     </>
   );
 }
