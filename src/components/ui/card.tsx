@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 interface CardProps {
   title: string;
@@ -11,29 +12,38 @@ interface CardProps {
 }
 
 const Card = ({title, description, src, url, color, i}: CardProps) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const getTopPosition = () => {
+    if (!isClient) return '30px'; // Default SSR value
+    
+    if (window.innerWidth >= 768) { // md breakpoint
+      return `calc(${i} * 15px)`;
+    }
+    switch (i) {
+      case 0: return '30px';
+      case 1: return '45px';
+      case 2: return '45px';
+      case 3: return '45px';
+      case 4: return '45px';
+      case 5: return '45px';
+      case 6: return '45px';
+      default: return '45px';
+    }
+  };
+
   return (
     <div className="min-h-[85vh] sm:min-h-[90vh] md:h-screen flex items-center justify-center sticky top-[100px] sm:top-[120px] md:top-[150px]">
       <div 
-        className="flex flex-col relative w-full md:w-[90%] max-w-[1000px] p-6 md:p-[50px] rounded-[25px] origin-top "
+        className={`flex flex-col relative w-full md:w-[90%] max-w-[1000px] p-6 md:p-[50px] rounded-[25px] origin-top min-h-[300px] sm:min-h-[350px] md:min-h-[400px]`}
         style={{
           backgroundColor: color, 
           zIndex: 7 - i,
-          top: (() => {
-            if (window.innerWidth >= 768) { // md breakpoint
-              return `calc(${i} * 15px)`;
-            }
-            else {  
-              switch (i) {
-                case 0: return '30px';
-                case 1: return '45px';
-                case 2: return '45px';
-                case 3: return '45px';
-                case 4: return '45px';
-                case 5: return '45px';
-                case 6: return '45px';
-              }
-            }
-          })(),
+          top: getTopPosition(),
         }}
       >
         <h2 className="text-center m-0 text-xl md:text-3xl">{title}</h2>
