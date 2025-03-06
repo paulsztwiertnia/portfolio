@@ -12,19 +12,38 @@ interface CardProps {
 
 const Card = ({title, description, src, url, color, i}: CardProps) => {
   return (
-    <div className="h-screen flex items-center justify-center sticky top-0">
+    <div className="min-h-[85vh] sm:min-h-[90vh] md:h-screen flex items-center justify-center sticky top-[100px] sm:top-[120px] md:top-[150px]">
       <div 
-        className="flex flex-col relative w-full md:w-[90%] max-w-[1000px] p-4 md:p-[50px] rounded-[25px] origin-top"
-        style={{backgroundColor: color, top:`calc(-5vh + ${i * 25}px)`}}
+        className="flex flex-col relative w-full md:w-[90%] max-w-[1000px] p-6 md:p-[50px] rounded-[25px] origin-top "
+        style={{
+          backgroundColor: color, 
+          zIndex: 7 - i,
+          top: (() => {
+            if (window.innerWidth >= 768) { // md breakpoint
+              return `calc(${i} * 15px)`;
+            }
+            else {  
+              switch (i) {
+                case 0: return '30px';
+                case 1: return '45px';
+                case 2: return '45px';
+                case 3: return '45px';
+                case 4: return '45px';
+                case 5: return '45px';
+                case 6: return '45px';
+              }
+            }
+          })(),
+        }}
       >
         <h2 className="text-center m-0 text-xl md:text-3xl">{title}</h2>
         <div className="flex flex-col md:flex-row gap-4 md:gap-[50px] mt-4 md:mt-[30px]">
           <div className="w-full md:w-[40%] flex flex-col ">
-            <p className="text-lg sm:text-xs md:text-xs lg:text-lg font-open-sans">
+            <p className="text-sm sm:text-base md:text-base lg:text-lg font-open-sans">
               {description}
             </p>
-            <span className="flex items-center gap-[5px] mt-5">
-              <a href={url} target="_blank" className="underline cursor-pointer underline-offset-2 font-open-sans">
+            <span className="flex items-center gap-[5px] mt-3 md:mt-5">
+              <a href={url} target="_blank" className="underline cursor-pointer underline-offset-2 font-open-sans text-sm sm:text-base">
                 See more
               </a>
               <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,14 +52,14 @@ const Card = ({title, description, src, url, color, i}: CardProps) => {
             </span>
           </div>
 
-          <div className="relative w-full md:w-[60%] h-[200px] md:h-[300px]">
+          <div className="relative w-full md:w-[60%] h-[150px] sm:h-[180px] md:h-[300px] mt-3 md:mt-0">
             <div className="relative w-full h-full">
               <Image
                 width={600}
                 height={600}
                 src={`${src}`}
                 alt="image"
-                className="object-cover rounded-md border-2" 
+                className="object-cover rounded-md border-2 h-full w-full" 
               />
             </div>
           </div>

@@ -72,7 +72,7 @@ export default function CustomizedTimeline() {
             <Typography variant="body1" component="span" fontWeight="bold" color="text.primary" fontFamily="'Open Sans', sans-serif">
               Bold Internet Solutions
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'bold', fontFamily: "'Open Sans', sans-serif" }}>
+            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
               Software Engineer
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ 
@@ -131,7 +131,7 @@ export default function CustomizedTimeline() {
             <Typography variant="body1" component="span" fontWeight="bold" color="text.primary" fontFamily="'Open Sans', sans-serif">
               MYC Graphics
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'bold', fontFamily: "'Open Sans', sans-serif" }}>
+            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
               Full Stack Developer
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ 
@@ -190,7 +190,7 @@ export default function CustomizedTimeline() {
             <Typography variant="body1" component="span" fontWeight="bold" color="text.primary" fontFamily="'Open Sans', sans-serif">
               Novell Software Solutions
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'bold', fontFamily: "'Open Sans', sans-serif" }}>
+            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
               Founder & Web Developer
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ 
@@ -249,7 +249,7 @@ export default function CustomizedTimeline() {
             <Typography variant="body1" component="span" fontWeight="bold" color="text.primary" fontFamily="'Open Sans', sans-serif">
               Audi
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'bold', fontFamily: "'Open Sans', sans-serif" }}>
+            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
               Pre Owned Sales Coordinator
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ 
