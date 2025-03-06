@@ -54,7 +54,7 @@ export const projects = [
     },
     {
         title: "Beata's Bakery",
-        description: "Located in Toronto's Bloor West Village, Beata crafts exceptional artisanal loaf cakes available through her secure online store. Her signature creations feature real fruit and a touch of alcohol, delivering a unique flavor experience to customers across the city.",
+        description: "Located in Toronto's Bloor West Village, Beata crafts exceptional artisanal loaf cakes. Her signature creations feature real fruit and a touch of alcohol, delivering a unique flavor experience to customers across the city.",
         image: "/projects/beata.png",
         link: "https://www.beatasbakery.ca",
         techStack: ["php.png", "javascript.png", "html.png", "css.png", "wordpress.png"],
