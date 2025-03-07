@@ -44,7 +44,6 @@ export default function Hamburger() {
       {/* Desktop Navigation */}
       <nav className="hidden md:block">
         <ul className="flex gap-8 me-4">
-          <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
           <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
           <li><a href="#experience" className="hover:text-primary transition-colors">Experience</a></li>
           <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
@@ -77,15 +76,6 @@ export default function Hamburger() {
               >
                 <CloseIcon fontSize="large"/>
               </button>
-              <li>
-                <a 
-                  href="/" 
-                  className="hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </a>
-              </li>
               <li>
                 <a 
                   href="#about" 
