@@ -138,3 +138,18 @@ body {
   stroke-dashoffset: -134;
   stroke-width: 3;
 }
+
+.contact-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
