@@ -9,7 +9,7 @@ import SocialLinks from '@/components/ui/socialLinks';
 import IconMotion from '@/components/ui/iconMotion';
 import Timeline from '@/components/ui/timeline';
 import Card from '@/components/ui/card';
-import ContactForm from '@/components/ui/contactForm';
+
 
 export default function Home() {
 
@@ -59,7 +59,7 @@ export default function Home() {
               <p className="text-2xl md:text-3xl font-light mb-2">Introduction.</p>
               <p className="text-base md:text-lg font-light leading-loose font-open-sans mb-12">{aboutMe.description}</p>
             </div>
-            <div className="max-w-xl lg:pl-10">
+            <div className="max-w-xl mt-8 lg:pl-10">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
                 <div className="flex flex-col items-center">
                   <IconMotion src="/icons/typescript.png" alt="Typescript" width={100} height={100} toolTip="Typescript" className="mb-8" yCord={[0, -20, 0]} />
@@ -78,7 +78,7 @@ export default function Home() {
                 <div className="flex flex-col items-center">
                   <IconMotion src="/icons/html.png" alt="HTML" width={100} height={100} toolTip="HTML" className="mb-8" yCord={[0, -20, 0]} />
                   <IconMotion src="/icons/css.png" alt="CSS" width={100} height={100} toolTip="CSS" className="mb-8" yCord={[0, -18, 0]} />
-                  <IconMotion src="/icons/tailwind.png" alt="Tailwind" width={100} height={100} toolTip="Tailwind" className="mb-8" yCord={[0, -22, 0]} />
+                  <IconMotion src="/icons/tailwind.png" alt="Tailwind" width={100} height={100} toolTip="Tailwind CSS" className="mb-8" yCord={[0, -22, 0]} />
                   <IconMotion src="/icons/bootstrap.png" alt="Bootstrap" width={100} height={100} toolTip="Bootstrap" className="mb-8" yCord={[0, -19, 0]} />
                   <IconMotion src="/icons/git.png" alt="Git" width={100} height={100} toolTip="Git" className="mb-8" yCord={[0, -21, 0]} />
                 </div>
@@ -103,7 +103,7 @@ export default function Home() {
         viewport={{ once: true }}
         className="md:mt-64 md:mb-32 mb-8 scroll-mt-[72px]"
       >
-        <div className="text-center">
+        <div className="text-center mt-4 sm:mt-32 md:mt-12 lg:mt-16">
           <h3 className="text-lg md:text-xl font-light">Experience</h3>
           <p className="text-2xl md:text-3xl font-light mb-6">My Journey.</p>
         </div>
@@ -111,7 +111,7 @@ export default function Home() {
       </motion.div>
 
       {/* Projects Section */}
-      <div className="sticky top-12 pb-4 pt-12">
+      <div className="sticky top-12 pb-4 mt-4 sm:mt-32 md:mt-12 lg:mt-16">
         <div className="text-center">
             <h3 className="text-lg md:text-xl font-light">Projects</h3>
             <p className="text-2xl md:text-3xl font-light mb-2">Explore my work.</p>
@@ -126,7 +126,21 @@ export default function Home() {
       </div>
 
       {/* Contact Section */}
-      <ContactForm />
+      <div id="contact" className="text-center mb-32 mt-32">
+        <h2 className="text-lg md:text-xl font-light mb-3">Have an idea?</h2>
+        <p className="text-2xl md:text-3xl font-light mb-8">Get in touch.</p>
+        <motion.button 
+          className="contact-button px-4 py-2 rounded-md"          
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.3 }}
+          onClick={() => {
+            window.open('https://calendly.com/consulation-novellsoftwaresolutions/software-solutions-consultation', '_blank');
+          }}
+        >
+          Contact Me
+        </motion.button>
+      </div>
     </>
   );
 }
