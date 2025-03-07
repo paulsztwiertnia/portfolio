@@ -1,12 +1,38 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Hamburger from './hamburger';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
 
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+      
+      if (isScrollingDown && currentScrollY > 75) {
+        console.log('scrolling down');
+        setIsScrolled(true);
+      } else if (!isScrollingDown) {
+        console.log('scrolling up');
+        setIsScrolled(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
     <>
-    <div className="flex justify-between items-center sticky top-0 z-50 bg-inherit h-[72px]">
+    <div className={`flex justify-between items-center sticky top-0 z-50 bg-inherit h-[85px] transition-transform duration-300 ${
+      isScrolled ? '-translate-y-[100%]' : 'translate-y-0'
+    }`}>
       <div className="flex items-center px-2 py-2">
         <Link href="/">
           <Image 
