@@ -1,7 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Tooltip from "@mui/material/Tooltip";
+import { useEffect, useState } from "react";
 
 // prop for image src
 interface IconMotionProps {
@@ -15,6 +15,17 @@ interface IconMotionProps {
 }
 
 export default function IconMotion({ src, alt, width, height, toolTip, className, yCord }: IconMotionProps ) {
+    const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+    const [tooltipText, setTooltipText] = useState(toolTip);
+
+    // remove tooltip after 3 seconds
+    useEffect(() => {
+        if (isTooltipVisible) {
+            setTimeout(() => {
+                setIsTooltipVisible(false);
+            }, 3000);
+        }
+    }, [isTooltipVisible]);
     return (
         <motion.button
             className={className}
@@ -33,14 +44,19 @@ export default function IconMotion({ src, alt, width, height, toolTip, className
                 y: yCord
             }}
         >
-            <Tooltip title={toolTip}>
-                <Image 
-                    src={src} 
-                    alt={alt} 
-                    width={width}
-                    height={height}
-                />
-            </Tooltip>
+            <Image 
+                src={src} 
+                alt={alt} 
+                width={width}
+                height={height}
+                onClick={() => {
+                    setIsTooltipVisible(!isTooltipVisible);
+                    setTooltipText(toolTip);
+                }}
+            />
+            {isTooltipVisible && tooltipText && (
+                <p className="text-xs text-gray-500">{tooltipText}</p>
+            )}
         </motion.button>
     );
 }
