@@ -14,10 +14,10 @@ export default function Header() {
       const isScrollingDown = currentScrollY > lastScrollY;
       
       if (isScrollingDown && currentScrollY > 75) {
-        console.log('scrolling down');
+        // console.log('scrolling down');
         setIsScrolled(true);
       } else if (!isScrollingDown) {
-        console.log('scrolling up');
+        // console.log('scrolling up');
         setIsScrolled(false);
       }
       
@@ -48,7 +48,6 @@ export default function Header() {
       <div>
         <Hamburger />
       </div>
-      
     </div>
     </>
   );
