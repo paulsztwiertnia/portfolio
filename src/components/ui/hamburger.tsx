@@ -53,8 +53,9 @@ export default function Hamburger() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 md:hidden">
-          <nav className="flex items-center justify-center h-full">
+        <div className="fixed inset-0 z-50 md:hidden">
+          <div className="absolute inset-0 bg-black/1 backdrop-blur-md" aria-hidden="true" />
+          <nav className="relative flex items-center justify-center min-h-screen">
             <ul className="flex flex-col items-center gap-8 text-2xl">
               <Link href="/">
                 <Image 
