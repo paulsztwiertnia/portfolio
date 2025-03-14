@@ -38,7 +38,7 @@ export default function Header() {
           <Image 
             src="/icons/PS-logo-transparent.png" 
             alt="Logo" 
-            className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 mt-2 me-3 absolute top-2 left-2" 
+            className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 mt-2 me-3 absolute top-2 left-2 z-50" 
             width={100} 
             height={100} 
           />
