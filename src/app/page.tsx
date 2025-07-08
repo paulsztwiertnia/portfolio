@@ -64,9 +64,9 @@ export default function Home() {
                 <div className="flex flex-col items-center">
                   <IconMotion src="/icons/typescript.png" alt="Typescript" width={100} height={100} toolTip="Typescript" className="mb-8" yCord={[0, -20, 0]} />
                   <IconMotion src="/icons/javascript.png" alt="Javascript" width={100} height={100} toolTip="Javascript" className="mb-8"  yCord={[0, -18, 0]} />
-                  <IconMotion src="/icons/c-programming.svg" alt="C" width={100} height={100} toolTip="C" className="mb-8" yCord={[0, -22, 0]} />
                   <IconMotion src="/icons/python-logo.png" alt="Python" width={100} height={100} toolTip="Python" className="mb-8" yCord={[0, -19, 0]} />
                   <IconMotion src="/icons/php.png" alt="PHP" width={100} height={100} toolTip="PHP" className="mb-8" yCord={[0, -21, 0]} />
+                  <IconMotion src="/icons/graphQL.png" alt="graphQL" width={100} height={100} toolTip="Graph QL" className="mb-8" yCord={[0, -22, 0]} />
                 </div>
                 <div className="flex flex-col items-center">
                   <IconMotion src="/icons/react.png" alt="React" width={100} height={100} toolTip="React" className="mb-8" yCord={[0, -18, 0]} />
@@ -83,9 +83,9 @@ export default function Home() {
                   <IconMotion src="/icons/git.png" alt="Git" width={100} height={100} toolTip="Git" className="mb-8" yCord={[0, -21, 0]} />
                 </div>
                 <div className="flex flex-col items-center">
-                  <IconMotion src="/icons/shopify.png" alt="Shopify" width={100} height={100} toolTip="Shopify" className="mb-8" yCord={[0, -20, 0]} />
                   <IconMotion src="/icons/craftCms.png" alt="Craft CMS" width={100} height={100} toolTip="Craft CMS" className="mb-8" yCord={[0, -18, 0]} />
                   <IconMotion src="/icons/wordpress.png" alt="Wordpress" width={100} height={100} toolTip="Wordpress" className="mb-8" yCord={[0, -22, 0]} />
+                  <IconMotion src="/icons/supabase.png" alt="Supabase" width={100} height={100} toolTip="Supabase" className="mb-8" yCord={[0, -20, 0]} />
                   <IconMotion src="/icons/firebase.png" alt="Firebase" width={100} height={100} toolTip="Firebase" className="mb-8" yCord={[0, -19, 0]} />
                   <IconMotion src="/icons/mySql.png" alt="MySQL" width={100} height={100} toolTip="MySQL" className="mb-8" yCord={[0, -21, 0]} />
                 </div>
