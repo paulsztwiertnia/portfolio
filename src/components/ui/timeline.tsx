@@ -242,7 +242,7 @@ export default function CustomizedTimeline() {
             variant="body2"
             color="text.secondary"
           >
-            2019 - 2024
+            2018 - 2023
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector sx={{ bgcolor: 'text.primary', opacity: 0.3 }} />
