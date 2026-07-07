@@ -9,9 +9,51 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
 import { motion } from 'framer-motion';
+
+const highlightSx = {
+  mt: 1,
+  display: { xs: 'none', sm: 'flex' },
+  flexDirection: 'column',
+  gap: 0.75,
+  fontWeight: 'light',
+  fontFamily: "'Open Sans', sans-serif",
+  lineHeight: 1.8,
+};
+
+function JobHighlights({ items }: { items: string[] }) {
+  return (
+    <Box component="ul" sx={{ ...highlightSx, listStyle: 'none', pl: 0, m: 0 }}>
+      {items.map((item) => (
+        <Box
+          key={item}
+          component="li"
+          sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.25 }}
+        >
+          <Box
+            component="span"
+            aria-hidden
+            sx={{
+              mt: '0.65em',
+              width: 6,
+              height: 6,
+              borderRadius: '50%',
+              bgcolor: 'text.primary',
+              opacity: 0.6,
+              flexShrink: 0,
+            }}
+          />
+          <Typography variant="body2" color="text.secondary">
+            {item}
+          </Typography>
+        </Box>
+      ))}
+    </Box>
+  );
+}
 
 export default function CustomizedTimeline() {
   return (
@@ -22,7 +64,7 @@ export default function CustomizedTimeline() {
       viewport={{ once: true }}
     >  
       <Timeline 
-        position="alternate"
+        position="right"
         sx={{
           '& .MuiTimelineItem-root:before': {
             flex: 0.2,
@@ -75,17 +117,14 @@ export default function CustomizedTimeline() {
               Bold Internet Solutions
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
-              Software Engineer
+              Full Stack Software Engineer
             </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ 
-              mt: 1, 
-              display: { xs: 'none', sm: 'block' },
-              fontWeight: 'light',
-              fontFamily: "'Open Sans', sans-serif",
-              lineHeight: 1.8
-            }}>
-              Developing modern web applications with React, Next.js and TypeScript.
-            </Typography>
+            <JobHighlights items={[
+              'Built accessible web apps compliant with Ontario AODA and WCAG 2.1 Level AA standards.',
+              'Developed a Node.js/Express REST API and bilingual Next.js app for Ontario heritage data — with Mapbox clustering, multilingual search, and Craft CMS GraphQL integration.',
+              'Built an ETL microservice syncing 1,600+ heritage sites via zero-downtime table-swap with versioned backups.',
+              'Architected Craft CMS powering 4 bilingual sites and gov portals serving 15,000+ users, including a Passport funding planner with 92% positive feedback.',
+            ]} />
           </TimelineContent>
         </TimelineItem>
 
@@ -134,76 +173,12 @@ export default function CustomizedTimeline() {
               MYC Graphics
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
-              Full Stack Developer
+              Full Stack Software Engineer
             </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ 
-              mt: 1, 
-              display: { xs: 'none', sm: 'block' },
-              fontWeight: 'light',
-              fontFamily: "'Open Sans', sans-serif",
-              lineHeight: 1.8
-            }}>
-              Developed websites using Wordpress, React, Mysql, TailwindCSS.
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0', fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}
-            align="right"
-            variant="body2"
-            color="text.secondary"
-          >
-            2022 - Present
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: 'text.primary', opacity: 0.3 }} />
-            <TimelineDot 
-              sx={{ 
-                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-                bgcolor: 'background.paper',
-                border: '2px solid',
-                borderColor: 'text.primary',
-                color: 'text.primary'
-              }}
-            >
-              <WorkIcon 
-                sx={{ 
-                  fontSize: {
-                    xs: '0.9rem', 
-                    sm: '1.5rem' 
-                  }
-                }} 
-              />
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: 'text.primary', opacity: 0.3 }} />
-          </TimelineSeparator>
-          <TimelineContent 
-            sx={{ 
-              py: '24px', 
-              px: 2,
-              transition: 'all 0.3s',
-              '&:hover': { 
-                transform: 'translateY(-3px)',
-              }
-            }}
-          >
-            <Typography variant="body1" component="span" fontWeight="bold" color="text.primary" fontFamily="'Open Sans', sans-serif">
-              Novell Software Solutions
-            </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
-              Founder & Web Developer
-            </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ 
-              mt: 1, 
-              display: { xs: 'none', sm: 'block' },
-              fontWeight: 'light',
-              fontFamily: "'Open Sans', sans-serif",
-              lineHeight: 1.8
-            }}>
-              Developing websites using Wordpress. Advertising using Google Ads, implementing SEO strategies.
-            </Typography>
+            <JobHighlights items={[
+              'Built performant AWS web apps with Next.js, React, and TypeScript for enterprise clients including Home Depot, Flynn Group, Circle K, and Ellis Don — with Auth0 auth and MySQL-backed project tracking.',
+              'Developed a React app for VistaPrint to program NFC business cards, optimizing the production pipeline for Android/iOS tap-to-share contact cards.',
+            ]} />
           </TimelineContent>
         </TimelineItem>
 
@@ -249,23 +224,17 @@ export default function CustomizedTimeline() {
             }}
           >
             <Typography variant="body1" component="span" fontWeight="bold" color="text.primary" fontFamily="'Open Sans', sans-serif">
-              Audi
+              Novell Software Solutions
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
-              Pre Owned Sales Coordinator
+              Full Stack Software Engineer
             </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ 
-              mt: 1, 
-              display: { xs: 'none', sm: 'block' },
-              fontWeight: 'light',
-              fontFamily: "'Open Sans', sans-serif",
-              lineHeight: 1.8
-            }}>
-              Inspecting, Preparing vehicles for sale. Managing dealership database.
-            </Typography>
+            <JobHighlights items={[
+              'Delivered responsive Next.js and React web applications that improved online visibility, engagement, and revenue for client projects.',
+              'Built and deployed RESTful backend services with Python/FastAPI and Go/Gin on AWS, configured behind Nginx reverse proxy.',
+            ]} />
           </TimelineContent>
         </TimelineItem>
-
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: 'auto 0', fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}
@@ -306,7 +275,7 @@ export default function CustomizedTimeline() {
             }}
           >
             <Typography variant="body1" component="span" fontWeight="bold" color="text.primary" fontFamily="'Open Sans', sans-serif">
-              Toronto Metropolitan University
+              Ryerson University
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
               BSc. Computer Science
@@ -319,65 +288,6 @@ export default function CustomizedTimeline() {
               lineHeight: 1.8
             }}>
               With a focus on software development, operating systems, networking and databases.
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0', fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}
-            align="right"
-            variant="body2"
-            color="text.secondary"
-          >
-            2017 - 2020
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: 'text.primary', opacity: 0.3 }} />
-            <TimelineDot 
-              sx={{ 
-                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-                bgcolor: 'background.paper',
-                border: '2px solid',
-                borderColor: 'text.primary',
-                color: 'text.primary'
-              }}
-            >
-              <WorkIcon 
-                sx={{ 
-                  fontSize: {
-                    xs: '1rem', 
-                    sm: '1.5rem' 
-                  }
-                }} 
-              />
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: 'text.primary', opacity: 0.3 }} />
-          </TimelineSeparator>
-          <TimelineContent 
-            sx={{ 
-              py: '24px', 
-              px: 2,
-              transition: 'all 0.3s',
-              '&:hover': { 
-                transform: 'translateY(-3px)',
-              }
-            }}
-          >
-            <Typography variant="body1" component="span" fontWeight="bold" color="text.primary" fontFamily="'Open Sans', sans-serif">
-              The Boulevard Club
-            </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'light', fontFamily: "'Open Sans', sans-serif" }}>
-              Sailing Instructor & Dock Master
-            </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ 
-              mt: 1, 
-              display: { xs: 'none', sm: 'block' },
-              fontWeight: 'light',
-              fontFamily: "'Open Sans', sans-serif",
-              lineHeight: 1.8
-            }}>
-              Instructed students from ages 8 to 16. Providing docking services and dock repairs to club members.
             </Typography>
           </TimelineContent>
         </TimelineItem>
