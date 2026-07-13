@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Hamburger from './hamburger';
@@ -30,7 +32,7 @@ export default function Header() {
 
   return (
     <>
-    <div className={`flex justify-between items-center sticky top-0 z-50 bg-inherit h-[85px] transition-transform duration-300 ${
+    <div className={`flex justify-between items-center sticky top-0 z-50 bg-black/90 backdrop-blur-sm text-white h-[85px] transition-transform duration-300 ${
       isScrolled ? '-translate-y-[100%]' : 'translate-y-100'
     }`}>
       <div className="flex items-center px-2 py-2">

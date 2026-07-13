@@ -1,5 +1,5 @@
 'use client'
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -55,7 +55,7 @@ export default function IconMotion({ src, alt, width, height, toolTip, className
                 }}
             />
             {isTooltipVisible && tooltipText && (
-                <p className="text-xs text-gray-500">{tooltipText}</p>
+                <p className="text-xs text-neutral-400">{tooltipText}</p>
             )}
         </motion.button>
     );
