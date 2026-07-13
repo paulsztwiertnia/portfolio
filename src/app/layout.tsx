@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${michroma.variable} ${openSans.variable} antialiased`}
+        className={`${michroma.variable} ${openSans.variable} antialiased bg-black text-white`}
       >
         {children}
         <Analytics />
