@@ -5,6 +5,14 @@ export const aboutMe = {
 
 export const projects = [
     {
+        title: "Servd",
+        description: "Servd is a Happy hour discovery platform with over 1600 verified Happy hour deals. Some key features include: An AI powered search engine, real time text alerts, advanced filters, itinerary planning, saving deals to collections, and creating custom collections of your favroutie deals.",
+        image: "/projects/",
+        link: "https://www.getservd.ca/",
+        techStack: ["nextJs.png", "", "typescript.png", "", ""],
+        color: "#fb5315"
+    },
+    {
         title: "Novell Software Solutions",
         description: "Novell Software Solutions is a digital agency specializing in website and app development, digital marketing, SEO, and hosting solutions. They combine innovative design with data-driven strategies to help businesses enhance their online presence and connect with their target audience.",
         image: "/projects/novell.png",
@@ -52,13 +60,13 @@ export const projects = [
         techStack: ["php.png", "javascript.png", "html.png", "css.png", "wordpress.png"],
         color: "#D0E8C5"
     },
-    {
-        title: "Beata's Bakery",
-        description: "Located in Toronto's Bloor West Village, Beata crafts exceptional artisanal loaf cakes. Her signature creations feature real fruit and a touch of alcohol, delivering a unique flavor experience to customers across the city.",
-        image: "/projects/beata.png",
-        link: "https://www.beatasbakery.ca",
-        techStack: ["php.png", "javascript.png", "html.png", "css.png", "wordpress.png"],
-        color: "#FAEDCE"
-    }
+    // {
+    //     title: "Beata's Bakery",
+    //     description: "Located in Toronto's Bloor West Village, Beata crafts exceptional artisanal loaf cakes. Her signature creations feature real fruit and a touch of alcohol, delivering a unique flavor experience to customers across the city.",
+    //     image: "/projects/beata.png",
+    //     link: "https://www.beatasbakery.ca",
+    //     techStack: ["php.png", "javascript.png", "html.png", "css.png", "wordpress.png"],
+    //     color: "#FAEDCE"
+    // }
 
 ]
