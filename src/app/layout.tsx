@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Michroma, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Analytics from "@/components/GoogleAnalytics";
+import { Header } from "@/components/ui/header";
 
 const michroma = Michroma({
   variable: "--font-michroma",
@@ -28,8 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+
         className={`${michroma.variable} ${openSans.variable} antialiased bg-black text-white`}
       >
+        <Header />
         {children}
         <Analytics />
       </body>

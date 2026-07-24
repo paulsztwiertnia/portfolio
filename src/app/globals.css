@@ -82,3 +82,38 @@ html {
   background-color: #000000;
   color: #ffffff;
 }
+
+/* SingleStore-style primary brand CTA */
+.brand-button {
+  --button-gradient-stop-1: #a33ef4;
+  --button-gradient-stop-2: #a33ef4;
+  --button-gradient-stop-3: #6707b6;
+  --button-gradient-stop-4: #360061;
+  background-image: linear-gradient(
+    135deg,
+    var(--button-gradient-stop-4) 0,
+    var(--button-gradient-stop-3) 33%,
+    var(--button-gradient-stop-1) 33%,
+    var(--button-gradient-stop-2) 66%,
+    var(--button-gradient-stop-3) 66%,
+    var(--button-gradient-stop-4) 100%
+  );
+  background-position: 100% 0;
+  background-size: 175% 100%;
+}
+
+.brand-button:hover {
+  background-position: 0 0;
+}
+
+.brand-button:focus-visible {
+  outline: 2px solid #bf70ff;
+  outline-offset: 2px;
+}
+
+.main {
+  width: calc(100% - 2rem);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -8,14 +8,19 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.5,
+  delay = 0,
+  as: Tag = "div",
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
+  /** Delay in seconds before the reveal starts. */
+  delay?: number;
+  as?: "div" | "h1" | "p" | "span";
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" ");
   useEffect(() => {
     animate(
       "span",
@@ -25,14 +30,14 @@ export const TextGenerateEffect = ({
       },
       {
         duration: duration ? duration : 1,
-        delay: stagger(0.2),
+        delay: stagger(0.2, { startDelay: delay }),
       }
     );
-  }, [scope.current]);
+  }, [animate, delay, duration, filter]);
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
+      <motion.span ref={scope}>
         {wordsArray.map((word, idx) => {
           return (
             <motion.span
@@ -46,17 +51,13 @@ export const TextGenerateEffect = ({
             </motion.span>
           );
         })}
-      </motion.div>
+      </motion.span>
     );
   };
 
   return (
-    <div className={cn("font-bold", className)}>
-      <div className="mt-4">
-        <div className="text-white text-sm md:text-base leading-snug tracking-wide font-light">
-          {renderWords()}
-        </div>
-      </div>
-    </div>
+    <Tag className={cn("leading-snug tracking-wide", className)}>
+      {renderWords()}
+    </Tag>
   );
 };

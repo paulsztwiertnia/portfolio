@@ -63,10 +63,10 @@ const experienceData = [
         role="Full Stack Software Engineer"
         icon={<Briefcase className="h-4 w-4" />}
         highlights={[
-          "Built accessible web apps compliant with Ontario AODA and WCAG 2.1 Level AA standards.",
-          "Developed a Node.js/Express REST API and bilingual Next.js app for Ontario heritage data — with Mapbox clustering, multilingual search, and Craft CMS GraphQL integration.",
+          "Developed a Node.js/Express REST API and a internationalized (EN/FR) Next.js app for the Ontario Heritage Trust. Features include Mapbox clustering, multilingual search, and Craft CMS GraphQL integration.",
           "Built an ETL microservice syncing 1,600+ heritage sites via zero-downtime table-swap with versioned backups.",
-          "Architected Craft CMS powering 4 bilingual sites and gov portals serving 15,000+ users, including a Passport funding planner with 92% positive feedback.",
+          "Architected Craft CMS powering 4 internationalized sites and government portals serving 15,000+ users, including a Passport Funding planning tool with 92% positive feedback.",
+          "Built accessible web apps compliant with Ontario AODA and WCAG 2.1 Level AA standards.",
         ]}
       />
     ),
@@ -79,7 +79,7 @@ const experienceData = [
         role="Full Stack Software Engineer"
         icon={<Briefcase className="h-4 w-4" />}
         highlights={[
-          "Built performant AWS web apps with Next.js, React, and TypeScript for enterprise clients including Home Depot, Flynn Group, Circle K, and Ellis Don — with Auth0 auth and MySQL-backed project tracking.",
+          "Built performant project management web apps on AWS EC2 instances with Next.js, React, TypeScript, MySQL, SQLite for enterprise clients including Home Depot, Flynn Group, Circle K, and Ellis Don.",
           "Developed a React app for VistaPrint to program NFC business cards, optimizing the production pipeline for Android/iOS tap-to-share contact cards.",
         ]}
       />
@@ -106,7 +106,7 @@ const experienceData = [
         company="Ryerson University"
         role="BSc. Computer Science"
         icon={<GraduationCap className="h-4 w-4" />}
-        note="With a focus on software development, operating systems, networking and databases."
+        highlights={["With a focus on software engineering, operating systems, networking and databases."]}
       />
     ),
   },
